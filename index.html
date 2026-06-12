@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Previu Pro - Visual Client Feedback for Elementor</title>
+    <meta
+      name="description"
+      content="Upgrade Previu with white-label client review links, uploads, voice notes, screenshots, Slack alerts, and a media library for Elementor agencies."
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Previu home">
+          <img src="assets/Previu-sidebar-icon.png" alt="Previu Logo">
+          <span>Previu</span>
+        </a>
+        <nav class="nav-links" aria-label="Page sections">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a class="header-cta" href="#pricing">Buy Pro</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="eyebrow">Visual Client Feedback</p>
+            <h1>Build the perfect review workflow inside Elementor.</h1>
+            <p class="hero-copy">
+              Previu Pro adds professional agency tools to your feedback loop. Gather visual pins, 
+              upload files, record voice notes, and receive instant Slack notifications—without requiring client accounts.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#pricing">Get Previu Pro</a>
+              <a class="button secondary" href="#features">Explore features</a>
+            </div>
+            <div class="trust-row" aria-label="Trust signals">
+              <span>WordPress.org approved</span>
+              <span>No client login required</span>
+            </div>
+          </div>
+          <div class="hero-preview" aria-label="Previu Pro product preview">
+            <div class="preview-topbar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="preview-body">
+              <div class="preview-sidebar">
+                <img src="assets/Previu-sidebar-icon.png" alt="Sidebar Logo">
+                <strong>Previu Pro</strong>
+                <span>Review Session</span>
+              </div>
+              <div class="preview-main">
+                <div class="preview-comment">
+                  <span class="pin">01</span>
+                  <div>
+                    <strong>Upload brand reference</strong>
+                    <p>Client attached 3 files and a 22 sec voice note.</p>
+                  </div>
+                </div>
+                <div class="preview-comment active-comment">
+                  <span class="pin">02</span>
+                  <div>
+                    <strong>Homepage hero feedback</strong>
+                    <p>Screenshot captured. Slack notification sent.</p>
+                  </div>
+                </div>
+                <div class="preview-status">
+                  <span>White label active</span>
+                  <span>Slack connected</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHO IT'S FOR -->
+      <section class="who-its-for">
+        <div class="section-inner">
+          <p class="section-eyebrow">AUDIENCE</p>
+          <h2>Designed for Elementor Professionals</h2>
+          <div class="who-grid">
+            <div class="who-card">
+              <div class="who-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              </div>
+              <span>Designers</span>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <span>Web Developers</span>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <span>Agencies</span>
+            </div>
+            <div class="who-card">
+              <div class="who-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <span>Freelancers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE FEATURE TABS (ElementsKit-style) -->
+      <section class="features-section" id="features">
+        <div class="section-inner">
+          <p class="section-eyebrow">FEATURES</p>
+          <h2>Powerful Agency Tools</h2>
+          <p class="section-desc">Instantly unlock the features agencies need to organize and streamline client handoffs.</p>
+
+          <!-- Tab Controller -->
+          <div class="tabs-control">
+            <button class="tab-btn active" data-tab="portal">Client Portal</button>
+            <button class="tab-btn" data-tab="collab">Team Collaboration</button>
+            <button class="tab-btn" data-tab="wp">WordPress Control</button>
+          </div>
+
+          <!-- Feature Grids (Dynamic tab containers) -->
+          <div class="tab-content active" id="tab-portal">
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feat-icon icon-blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                </div>
+                <h3>File attachments</h3>
+                <p>Clients can upload brand assets, images, videos, ZIP archives, or reference PDFs directly onto specific pins.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-violet">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <h3>Browser voice notes</h3>
+                <p>Record audio notes straight in the browser. Clients describe revisions verbally without typing long emails.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-gold">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                </div>
+                <h3>Screenshot capture</h3>
+                <p>Captures full-page or viewport context automatically, locking comments to what the client actually saw.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-collab">
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feat-icon icon-rose">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                </div>
+                <h3>Slack notifications</h3>
+                <p>Alerts your team instantly in Slack when feedback is submitted, including comment text and page metadata.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <h3>Visual page pins</h3>
+                <p>Pins comments to exact coordinates. Keeps annotations isolated across mobile, tablet, and desktop viewports.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-mint">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h3>Status resolution</h3>
+                <p>Mark comments resolved, edit annotations, or filter pins directly from the WordPress dashboard or Elementor panel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="tab-wp">
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feat-icon icon-mint">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h3>Media Library storage</h3>
+                <p>Client attachments upload natively directly inside your WordPress Media Library, ready to use on your layout pages.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-dark">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                </div>
+                <h3>Elementor Drag-and-Drop</h3>
+                <p>Browse client uploads directly inside the Elementor editor side panel and drag them straight into layout widgets.</p>
+              </div>
+              <div class="feature-card">
+                <div class="feat-icon icon-violet">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <h3>White-label portal</h3>
+                <p>Remove Previu branding. Rebrand the client-side annotation portal with your own agency name and brand logo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIAL CARD -->
+      <section class="testimonial-section">
+        <div class="section-inner">
+          <div class="testimonial-card">
+            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 21h3l2-4H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4v8l-2 4h3l2-4H9a2 2 0 0 1-2-2V9" fill="currentColor"/>
+              <path d="M13 21h3l2-4h-3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4v8l-2 4h3l2-4h-3a2 2 0 0 1-2-2V9" fill="currentColor"/>
+            </svg>
+            <p class="testimonial-text">
+              "We cut our client feedback revision loop in half. The white-label portal and voice note uploads give our client reviews a polished, premium agency finish. Clients love how simple it is."
+            </p>
+            <div class="testimonial-user">
+              <strong>Alex Mercer</strong>
+              <span>Founder, Pixelflow Studio</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING SECTION -->
+      <section class="pricing-section" id="pricing">
+        <div class="section-inner pricing-inner">
+          <p class="section-eyebrow">PRICING PLANS</p>
+          <h2>Simple pricing. Big control.</h2>
+          <div class="pricing-header-desc">
+            <p>Every license tier unlocks all Pro features. Pick the tier that matches your active sites.</p>
+            <div class="billing-toggle" role="group" aria-label="Billing period">
+              <button class="active" type="button" data-billing="annual">Annual</button>
+              <button type="button" data-billing="lifetime">Lifetime</button>
+            </div>
+          </div>          <div class="pricing-grid">
+            <article class="price-card" data-tier="free">
+              <div class="tier-top">
+                <h3>Previu Free</h3>
+                <span>Free forever license</span>
+              </div>
+              <div class="price"><span>$0</span><small>/forever</small></div>
+              <p class="tier-note">Best for freelancers starting out with visual client feedback reviews.</p>
+              <ul class="card-features">
+                <li>Visual page pins & notes</li>
+                <li>Client drawing annotation tools</li>
+                <li>Switch mobile & tablet views</li>
+                <li>Resolve feedback in Elementor</li>
+                <li>Manage pins in WP dashboard</li>
+              </ul>
+              <a class="button secondary" target="_blank" rel="noopener" href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/">Download Free</a>
+            </article>
+
+            <article class="price-card" data-tier="single">
+              <div class="tier-top">
+                <h3>Single Site</h3>
+                <span>1 active site license</span>
+              </div>
+              <div class="price"><span data-price>$79</span><small data-period>/year</small></div>
+              <p class="tier-note">Best for freelancers managing one main client site.</p>
+              <ul class="card-features">
+                <li><strong>Everything in Free</strong></li>
+                <li>White-label client reviews</li>
+                <li>Files & voice notes uploads</li>
+                <li>Instant Slack notifications</li>
+                <li>Elementor Media Tab integration</li>
+              </ul>
+              <a class="button secondary checkout-link" target="_blank" rel="noopener" href="#" data-plan="single">Get started</a>
+            </article>
+
+            <article class="price-card highlighted" data-tier="five">
+              <div class="popular">Most popular</div>
+              <div class="tier-top">
+                <h3>5 Sites</h3>
+                <span>5 active sites license</span>
+              </div>
+              <div class="price"><span data-price>$129</span><small data-period>/year</small></div>
+              <p class="tier-note">Best for boutique agencies running multiple client reviews.</p>
+              <ul class="card-features">
+                <li><strong>Everything in Free</strong></li>
+                <li>White-label client reviews</li>
+                <li>Files & voice notes uploads</li>
+                <li>Instant Slack notifications</li>
+                <li>Elementor Media Tab integration</li>
+              </ul>
+              <a class="button primary checkout-link" target="_blank" rel="noopener" href="#" data-plan="five">Get started</a>
+            </article>
+
+            <article class="price-card" data-tier="unlimited">
+              <div class="tier-top">
+                <h3>Unlimited</h3>
+                <span>Unlimited sites license</span>
+              </div>
+              <div class="price"><span data-price>$199</span><small data-period>/year</small></div>
+              <p class="tier-note">Best for busy teams standardizing every client handoff.</p>
+              <ul class="card-features">
+                <li><strong>Everything in Free</strong></li>
+                <li>White-label client reviews</li>
+                <li>Files & voice notes uploads</li>
+                <li>Instant Slack notifications</li>
+                <li>Elementor Media Tab integration</li>
+              </ul>
+              <a class="button secondary checkout-link" target="_blank" rel="noopener" href="#" data-plan="unlimited">Get started</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FREQUENTLY ASKED QUESTIONS -->
+      <section class="faq-section" id="faq">
+        <div class="section-inner faq-container">
+          <div class="faq-header-col">
+            <p class="section-eyebrow">FAQ</p>
+            <h2>Frequently Asked Questions</h2>
+            <p>Answers to common questions before onboarding Previu Pro.</p>
+            <a class="button primary" href="#pricing">Upgrade to Pro</a>
+          </div>
+          <div class="faq-accordion-col">
+            <details open>
+              <summary>Do all tiers include the same Pro features?</summary>
+              <p>Yes. The plan only changes by the number of active sites: 1, 5, or unlimited.</p>
+            </details>
+            <details>
+              <summary>Do clients need a WordPress account?</summary>
+              <p>No. Clients use the same shareable review link experience from the free plugin.</p>
+            </details>
+            <details>
+              <summary>Does Pro replace the free plugin?</summary>
+              <p>No. Pro is an add-on. Install and activate the free Previu plugin first, then activate Pro.</p>
+            </details>
+            <details>
+              <summary>Can I buy lifetime access?</summary>
+              <p>Yes. Use the pricing toggle above to switch from annual to lifetime pricing.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM CTA BANNER (ElementsKit-style) -->
+      <section class="bottom-cta-banner">
+        <div class="section-inner">
+          <h2>Elevate your client reviews today.</h2>
+          <p>Get Previu Pro to bring white-label portals, client file uploads, browser voice notes, and Slack alerts to your Elementor workflow.</p>
+          <a class="button primary" href="#pricing">Buy Previu Pro</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>&copy; 2026 Previu. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
