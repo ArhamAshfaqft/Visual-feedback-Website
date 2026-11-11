@@ -1,382 +1,1117 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Previu Pro - Visual Client Feedback for Elementor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Previu — Client Feedback, Directly Inside Elementor</title>
     <meta
       name="description"
-      content="Upgrade Previu with white-label client review links, uploads, voice notes, screenshots, Slack alerts, and a media library for Elementor agencies."
-    >
-    <link rel="icon" type="image/png" href="assets/Previu-sidebar-icon.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="assets/Previu-icon.png" sizes="192x192">
-    <link rel="apple-touch-icon" href="assets/Previu-icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+      content="Collect visual website feedback with shareable review links. Reply and resolve inside Elementor. Start free; add uploads, voice notes, Slack and branding with Pro."
+    />
+    <link rel="canonical" href="https://plugin.usepreviu.com/" />
+    <meta property="og:url" content="https://plugin.usepreviu.com/" />
+    <meta property="og:image" content="https://plugin.usepreviu.com/assets/banner-1544x500.png" />
+    <meta property="og:image:alt" content="Previu visual client feedback for Elementor" />
+    <meta name="theme-color" content="#6942df" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Previu — Client feedback, directly inside Elementor"
+    />
+    <meta
+      property="og:description"
+      content="Share a link. Collect clear visual feedback. Make changes with the conversation beside your work."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/Previu-icon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css?v=compact-3" />
+    <script src="script.js?v=compact-3" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "Previu – Visual Client Feedback for Elementor",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "WordPress",
+            "description": "Visual client feedback with review links, annotations, threaded replies, and feedback resolution inside Elementor. Pro adds media, branding, and Slack.",
+            "softwareRequirements": "WordPress 5.8+, PHP 7.4+, Elementor for editor integration. Pro requires Previu Free and an active license.",
+            "featureList": [
+              "Shareable review links; no client signup",
+              "Pins, arrows, rectangles & freehand drawings",
+              "Desktop, tablet & mobile review views",
+              "Threaded replies & feedback statuses",
+              "Feedback panel inside Elementor",
+              "WordPress dashboard & email notifications",
+              "File attachments & browser voice notes",
+              "Screenshot capture tool",
+              "Previu media browser & WordPress library import",
+              "Agency branding & logo controls",
+              "Slack notifications via webhook"
+            ],
+            "downloadUrl": "https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/",
+            "offers": {
+              "@type": "Offer",
+              "name": "Previu Free",
+              "price": "0",
+              "priceCurrency": "USD",
+              "url": "https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do clients need an account or another app?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Send a review link and your client can open it in their browser, enter their name, and leave feedback. They do not need a WordPress account or browser extension."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does the free version include?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Previu Free includes review sessions, visual pins and drawing tools, responsive review views, threaded replies, feedback statuses, the Elementor feedback panel, and the WordPress dashboard. Pro adds media, branding, and Slack features."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do I need Elementor Pro?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The integration uses Elementor’s editor; Elementor Pro is not listed as a requirement. You need WordPress 5.8 or later and PHP 7.4 or later. Try Previu Free with your theme and plugins before rolling it out to client sites."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Pro replace the free plugin?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Previu Pro is a separate add-on. Install and activate Previu Free first, then install Pro and activate its license."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where do uploaded files go?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Pro uploads are stored in Previu’s media folder on your WordPress host. Browse them in Previu and separately import selected files into the WordPress Media Library. Upload types and sizes depend on plugin settings and hosting limits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can clients review different screen sizes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. The review interface includes desktop, tablet, and mobile viewport modes. Feedback records its device context, and the Elementor panel lets you filter feedback by device."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do voice notes and Slack need?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Voice notes need microphone permission, HTTPS (or localhost), and a browser that supports the recording format. Slack notifications need a configured incoming webhook. Both require Pro; email delivery depends on your WordPress mail setup."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use my agency’s branding?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "With Pro, set an agency name and portal logo and use the branding controls to remove Previu branding from the client review experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do annual and lifetime plans differ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Annual plans are billed yearly. The lifetime option is a one-time purchase. Every paid tier includes the same Pro features, with a choice of 1, 5, or unlimited sites. Check final license, updates, support, and purchase terms at checkout."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header" aria-label="Primary">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Previu home">
-          <img src="assets/Previu-sidebar-icon.png" alt="Previu Logo">
-          <span>Previu</span>
-        </a>
-        <nav class="nav-links" aria-label="Page sections">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="Previu home"
+          ><img
+            src="assets/Previu-icon.png"
+            width="34"
+            height="34"
+            alt=""
+          />previu<span>.</span></a
+        ><button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          Menu ☰
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="#workflow">How it works</a><a href="#features">Features</a
+          ><a href="#compare">Free vs Pro</a><a href="#pricing">Pricing</a
+          ><a class="nav-cta" href="#pricing">Get Previu ↗</a>
         </nav>
-        <div class="header-actions-group">
-          <a class="header-cta" href="#pricing">Buy Pro</a>
-          <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
       </div>
     </header>
-
-    <main id="top">
-      <!-- HERO SECTION -->
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-content">
-            <p class="eyebrow">Visual Client Feedback</p>
-            <h1>Build the perfect review workflow inside Elementor.</h1>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-intro">
+            <div class="hero-orbit orbit-left" aria-hidden="true">
+              <img
+                class="orbit-art"
+                src="assets/illustrations/hero-pin.webp"
+                width="96"
+                height="96"
+                alt=""
+                decoding="async"
+              /><i></i><span class="orbit-label">A little more context.</span>
+            </div>
+            <div class="hero-orbit orbit-right" aria-hidden="true">
+              <img
+                class="orbit-art"
+                src="assets/illustrations/hero-resolved.webp"
+                width="96"
+                height="96"
+                alt=""
+                decoding="async"
+              /><i></i
+              ><span class="orbit-label">A lot less back-and-forth.</span>
+            </div>
+            <p class="eyebrow">
+              <span class="live-dot"></span> BUILT FOR WORDPRESS & ELEMENTOR
+            </p>
+            <h1>Client feedback.<br /><span>Right inside Elementor.</span></h1>
             <p class="hero-copy">
-              Previu Pro adds professional agency tools to your feedback loop. Gather visual pins, 
-              upload files, record voice notes, and receive instant Slack notifications—without requiring client accounts.
+              Share a link. Let clients point to what needs changing.<br
+                class="desktop-break"
+              />
+              Then reply, edit, and resolve—with feedback beside your work.
             </p>
-            <div class="hero-actions">
-              <a class="button primary" href="#pricing">Get Previu Pro</a>
-              <a class="button secondary" target="_blank" rel="noopener" href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/">Download Free</a>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/"
+                >Start with Previu Free ↗</a
+              ><a class="button plain" href="#workflow">See how it works ↓</a>
             </div>
-            <div class="trust-row" aria-label="Trust signals">
-              <span>WordPress.org approved</span>
-              <span>No client login required</span>
-            </div>
-          </div>
-          <div class="hero-preview" aria-label="Previu Pro product preview">
-            <div class="preview-topbar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="preview-body">
-              <div class="preview-sidebar">
-                <img src="assets/Previu-sidebar-icon.png" alt="Sidebar Logo">
-                <strong>Previu Pro</strong>
-                <span>Review Session</span>
-              </div>
-              <div class="preview-main">
-                <div class="preview-comment">
-                  <span class="pin">01</span>
-                  <div>
-                    <strong>Upload brand reference</strong>
-                    <p>Client attached 3 files and a 22 sec voice note.</p>
-                  </div>
-                </div>
-                <div class="preview-comment active-comment">
-                  <span class="pin">02</span>
-                  <div>
-                    <strong>Homepage hero feedback</strong>
-                    <p>Screenshot captured. Slack notification sent.</p>
-                  </div>
-                </div>
-                <div class="preview-status">
-                  <span>White label active</span>
-                  <span>Slack connected</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHO IT'S FOR -->
-      <section class="who-its-for">
-        <div class="section-inner">
-          <p class="section-eyebrow">AUDIENCE</p>
-          <h2>Designed for Elementor Professionals</h2>
-          <div class="who-grid">
-            <div class="who-card">
-              <div class="who-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-              </div>
-              <span>Designers</span>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-              </div>
-              <span>Web Developers</span>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              </div>
-              <span>Agencies</span>
-            </div>
-            <div class="who-card">
-              <div class="who-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              </div>
-              <span>Freelancers</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- INTERACTIVE FEATURE TABS (ElementsKit-style) -->
-      <section class="features-section" id="features">
-        <div class="section-inner">
-          <p class="section-eyebrow">FEATURES</p>
-          <h2>Powerful Agency Tools</h2>
-          <p class="section-desc">Instantly unlock the features agencies need to organize and streamline client handoffs.</p>
-
-          <!-- Tab Controller -->
-          <div class="tabs-control">
-            <button class="tab-btn active" data-tab="portal">Client Portal</button>
-            <button class="tab-btn" data-tab="collab">Team Collaboration</button>
-            <button class="tab-btn" data-tab="wp">WordPress Control</button>
-          </div>
-
-          <!-- Feature Grids (Dynamic tab containers) -->
-          <div class="tab-content active" id="tab-portal">
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feat-icon icon-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-                </div>
-                <h3>File attachments</h3>
-                <p>Clients can upload brand assets, images, videos, ZIP archives, or reference PDFs directly onto specific pins.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-violet">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
-                </div>
-                <h3>Browser voice notes</h3>
-                <p>Record audio notes straight in the browser. Clients describe revisions verbally without typing long emails.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-gold">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-                </div>
-                <h3>Screenshot capture</h3>
-                <p>Captures full-page or viewport context automatically, locking comments to what the client actually saw.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tab-collab">
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feat-icon icon-rose">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                </div>
-                <h3>Slack notifications</h3>
-                <p>Alerts your team instantly in Slack when feedback is submitted, including comment text and page metadata.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                </div>
-                <h3>Visual page pins</h3>
-                <p>Pins comments to exact coordinates. Keeps annotations isolated across mobile, tablet, and desktop viewports.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-mint">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                </div>
-                <h3>Status resolution</h3>
-                <p>Mark comments resolved, edit annotations, or filter pins directly from the WordPress dashboard or Elementor panel.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="tab-content" id="tab-wp">
-            <div class="features-grid">
-              <div class="feature-card">
-                <div class="feat-icon icon-mint">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
-                </div>
-                <h3>Media Library storage</h3>
-                <p>Client attachments upload natively directly inside your WordPress Media Library, ready to use on your layout pages.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-dark">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
-                </div>
-                <h3>Elementor Drag-and-Drop</h3>
-                <p>Browse client uploads directly inside the Elementor editor side panel and drag them straight into layout widgets.</p>
-              </div>
-              <div class="feature-card">
-                <div class="feat-icon icon-violet">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </div>
-                <h3>White-label portal</h3>
-                <p>Remove Previu branding. Rebrand the client-side annotation portal with your own agency name and brand logo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TESTIMONIAL CARD -->
-      <section class="testimonial-section">
-        <div class="section-inner">
-          <div class="testimonial-card">
-            <svg class="quote-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 21h3l2-4H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4v8l-2 4h3l2-4H9a2 2 0 0 1-2-2V9" fill="currentColor"/>
-              <path d="M13 21h3l2-4h-3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4v8l-2 4h3l2-4h-3a2 2 0 0 1-2-2V9" fill="currentColor"/>
-            </svg>
-            <p class="testimonial-text">
-              "We cut our client feedback revision loop in half. The white-label portal and voice note uploads give our client reviews a polished, premium agency finish. Clients love how simple it is."
+            <p class="hero-notes">
+              <span>✓ No client signup</span><span>✓ Free core workflow</span
+              ><span>✓ Your WordPress site</span>
             </p>
-            <div class="testimonial-user">
-              <strong>Alex Mercer</strong>
-              <span>Founder, Pixelflow Studio</span>
+          </div>
+          <div class="product-demo real-demo" id="demo">
+            <div
+              class="demo-scenes"
+              role="group"
+              aria-label="Explore the product demo"
+            >
+              <button
+                type="button"
+                data-demo-scene
+                data-image="client-review"
+                data-description="Clients review the actual page with visual pins and a feedback sidebar."
+                data-alt="Actual Previu client review interface with two pinned comments on the Nord Studio demo page."
+                aria-pressed="true"
+              >
+                01 <span>Client review</span>
+              </button>
+              <button
+                type="button"
+                data-demo-scene
+                data-image="elementor-feedback"
+                data-description="The same feedback and threaded replies appear beside the page in Elementor."
+                data-alt="Actual Elementor editor showing the Nord Studio page beside Previu’s Client Feedback panel."
+                aria-pressed="false"
+              >
+                02 <span>Inside Elementor</span>
+              </button>
+              <button
+                type="button"
+                data-demo-scene
+                data-image="resolved"
+                data-description="Reply to a client and move the conversation into the Resolved filter."
+                data-alt="Actual Previu Resolved filter inside Elementor showing a developer reply to a client’s feedback."
+                aria-pressed="false"
+              >
+                03 <span>Reply & resolve</span>
+              </button>
             </div>
+            <figure class="real-demo-figure">
+              <a
+                id="demo-fullsize"
+                data-demo-expand
+                href="assets/demo/client-review.webp"
+                target="_blank"
+                rel="noopener"
+                aria-label="Enlarge the product screenshot"
+                ><img
+                  id="demo-screenshot"
+                  src="assets/demo/client-review.webp"
+                  width="1425"
+                  height="1000"
+                  alt="Actual Previu client review interface with two pinned comments on the Nord Studio demo page."
+                  decoding="async"
+              /></a>
+              <figcaption id="demo-description" aria-live="polite">
+                Clients review the actual page with visual pins and a feedback
+                sidebar.
+              </figcaption>
+            </figure>
+
+            <div class="demo-compact-actions" hidden>
+              <a
+                class="demo-play-button"
+                href="assets/demo/previu-walkthrough.mp4"
+                data-demo-video
+                >▶ Watch walkthrough <span>18 sec</span></a
+              ><span>Actual product screens · Sample project</span>
+            </div>
+            <noscript
+              ><p class="demo-noscript">
+                Explore the screenshots:
+                <a href="assets/demo/client-review.webp">Client review</a> ·
+                <a href="assets/demo/elementor-feedback.webp"
+                  >Inside Elementor</a
+                >
+                · <a href="assets/demo/resolved.webp">Resolved feedback</a>
+              </p></noscript
+            >
+          </div>
+          <div class="platform-strip">
+            <span>Made for the way you build.</span>
+            <div class="platform-logos">
+              <a href="https://wordpress.org/" aria-label="WordPress"
+                ><img
+                  class="wordpress-logo"
+                  src="assets/wordpress-logo.png"
+                  alt="WordPress"
+                  width="148"
+                  height="34"
+                  loading="lazy" /></a
+              ><span class="platform-plus" aria-hidden="true">+</span
+              ><a href="https://elementor.com/" aria-label="Elementor"
+                ><img
+                  class="elementor-logo"
+                  src="assets/elementor-logo.svg"
+                  alt="Elementor"
+                  width="148"
+                  height="26"
+                  loading="lazy"
+              /></a>
+            </div>
+            <span>For freelancers, studios & agencies</span>
           </div>
         </div>
       </section>
-
-      <!-- PRICING SECTION -->
-      <section class="pricing-section" id="pricing">
-        <div class="section-inner pricing-inner">
-          <p class="section-eyebrow">PRICING PLANS</p>
-          <h2>Simple pricing. Big control.</h2>
-          <div class="pricing-header-desc">
-            <p>Every license tier unlocks all Pro features. Pick the tier that matches your active sites.</p>
-            <div class="billing-toggle" role="group" aria-label="Billing period">
-              <button class="active" type="button" data-billing="annual">Annual</button>
-              <button type="button" data-billing="lifetime">Lifetime</button>
-            </div>
-          </div>          <div class="pricing-grid">
-            <article class="price-card" data-tier="free">
-              <div class="tier-top">
-                <h3>Previu Free</h3>
-                <span>Free forever license</span>
+      <section class="section workflow" id="workflow">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">A SHORTER PATH FROM FEEDBACK TO FIXED</p>
+            <h2>One link. A clear conversation.<br />A better handoff.</h2>
+            <p>Keep the page, the request, and the discussion connected.</p>
+          </div>
+          <p class="illustration-note">
+            Workflow illustrations · Simplified interface examples
+          </p>
+          <div class="steps">
+            <article>
+              <span class="step-number">01 / SHARE</span>
+              <div class="generated-art workflow-art">
+                <img
+                  src="assets/illustrations/workflow-share-720.webp"
+                  srcset="
+                    assets/illustrations/workflow-share-720.webp   720w,
+                    assets/illustrations/workflow-share-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of sharing a client review link."
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div class="price"><span>$0</span><small>/forever</small></div>
-              <p class="tier-note">Best for freelancers starting out with visual client feedback reviews.</p>
-              <ul class="card-features">
-                <li>Visual page pins & notes</li>
-                <li>Client drawing annotation tools</li>
-                <li>Switch mobile & tablet views</li>
-                <li>Resolve feedback in Elementor</li>
-                <li>Manage pins in WP dashboard</li>
-              </ul>
-              <a class="button secondary" target="_blank" rel="noopener" href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/">Download Free</a>
+              <h3>Send the page. Start the review.</h3>
+              <p>
+                Create a review session in WordPress and share its link. Your
+                client enters their name and starts reviewing in their browser.
+              </p>
             </article>
-
+            <article>
+              <span class="step-number">02 / COLLECT</span>
+              <div class="generated-art workflow-art">
+                <img
+                  src="assets/illustrations/workflow-collect-720.webp"
+                  srcset="
+                    assets/illustrations/workflow-collect-720.webp   720w,
+                    assets/illustrations/workflow-collect-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of a client comment attached to a heading."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Point to what needs work.</h3>
+              <p>
+                Clients pin comments, draw arrows, outline areas, and add
+                freehand annotations. Desktop, tablet, and mobile views give
+                requests context.
+              </p>
+            </article>
+            <article>
+              <span class="step-number">03 / RESOLVE</span>
+              <div class="generated-art workflow-art">
+                <img
+                  src="assets/illustrations/workflow-resolve-720.webp"
+                  srcset="
+                    assets/illustrations/workflow-resolve-720.webp   720w,
+                    assets/illustrations/workflow-resolve-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of resolved feedback beside the editor."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Make changes where you build.</h3>
+              <p>
+                Open Previu inside Elementor, read and reply to feedback, then
+                mark it resolved. Manage sessions from the WordPress dashboard.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="feature-lead">
+            <div>
+              <p class="eyebrow">THE CONTEXT YOU WERE MISSING</p>
+              <h2>Less translating feedback.<br />More making it happen.</h2>
+            </div>
+            <p>
+              From a quick text change to a detailed design review, keep the
+              request close to the work.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card feature-wide">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  class=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="2.5" /></svg></span
+              ><span class="edition">Free</span>
+              <h3>Feedback with a place to belong.</h3>
+              <p>
+                Pins, rectangles, arrows, and freehand drawings turn vague
+                requests into visual context. Threaded replies keep the
+                discussion with each annotation.
+              </p>
+              <div class="annotation-sample">
+                <span>Make this feel more like us.</span><b>1</b
+                ><small>Jamie · Heading feedback</small>
+              </div>
+            </article>
+            <article class="feature-card feature-dark">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  class=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="16" rx="3" />
+                  <path d="M9 4v16M13 9h4m-4 4h4m-4 3h2" /></svg></span
+              ><span class="edition">Free</span>
+              <h3>Stay in your Elementor flow.</h3>
+              <p>
+                Read feedback, reply, filter by device, and update its status
+                from the editor panel. Manage review sessions in your WordPress
+                dashboard.
+              </p>
+              <div class="status-tags">
+                <span>● Pending</span><span>◌ In progress</span
+                ><span>✓ Resolved</span>
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  class=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 15V3m-4 4 4-4 4 4M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"
+                  /></svg></span
+              ><span class="edition">Pro</span>
+              <h3>The files behind the feedback.</h3>
+              <p>
+                Collect images, videos, PDFs, documents, and supported archives.
+                Browse uploads in Previu and separately import selected files
+                into the WordPress Media Library.
+              </p>
+              <div class="generated-art feature-art">
+                <img
+                  src="assets/illustrations/feature-files-720.webp"
+                  srcset="
+                    assets/illustrations/feature-files-720.webp   720w,
+                    assets/illustrations/feature-files-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of media previews and a separate library import action."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  class=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="9" y="2" width="6" height="13" rx="3" />
+                  <path
+                    d="M5 10v2a7 7 0 0 0 14 0v-2m-7 9v3m-4 0h8"
+                  /></svg></span
+              ><span class="edition">Pro</span>
+              <h3>Show it. Say it. Explain it.</h3>
+              <p>
+                Browser voice notes help clients explain the nuance. The
+                screenshot tool captures visual references to attach to
+                feedback.
+              </p>
+              <div class="generated-art feature-art">
+                <img
+                  src="assets/illustrations/feature-voice-720.webp"
+                  srcset="
+                    assets/illustrations/feature-voice-720.webp   720w,
+                    assets/illustrations/feature-voice-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of an attached voice note and screenshot."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true"
+                ><svg
+                  class=""
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 0-4h-1a2 2 0 0 1 0-4h4a5 5 0 0 0 5-5c0-3-4-5-9-5Z"
+                  />
+                  <path d="M7 9h.01M10 6h.01M15 6h.01M6 13h.01" /></svg></span
+              ><span class="edition">Pro</span>
+              <h3>Your agency. Your review space.</h3>
+              <p>
+                Add your agency name and logo, remove Previu branding from the
+                client experience, and connect a Slack webhook for new-feedback
+                notifications.
+              </p>
+              <div class="generated-art feature-art">
+                <img
+                  src="assets/illustrations/feature-branding-720.webp"
+                  srcset="
+                    assets/illustrations/feature-branding-720.webp   720w,
+                    assets/illustrations/feature-branding-1200.webp 1200w
+                  "
+                  sizes="(max-width: 760px) calc(100vw - 40px), 390px"
+                  width="1536"
+                  height="1024"
+                  alt="Illustration of agency branding settings and a review portal."
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="review-section">
+        <div class="container review-inner">
+          <div>
+            <p class="eyebrow">FROM THE WORDPRESS COMMUNITY</p>
+            <a
+              class="text-link"
+              href="https://wordpress.org/support/plugin/previu-visual-client-feedback-for-elementor/reviews/"
+              >Read the review on WordPress.org ↗</a
+            >
+          </div>
+          <figure>
+            <blockquote>
+              “The feedback is visible inside the Elementor editor, perfect,
+              thank you”
+            </blockquote>
+            <figcaption>
+              <span class="avatar">D</span
+              ><span
+                ><b>Drazen</b
+                ><small>WordPress.org reviewer · August 20, 2026</small></span
+              >
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="section comparison" id="compare">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">START WITH THE WORKFLOW. ADD THE EXTRAS.</p>
+            <h2>A useful free plugin.<br />An agency-ready upgrade.</h2>
+            <p>
+              The core review workflow is free. Pro adds richer feedback and
+              agency tools.
+            </p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <caption>
+                Previu Free and Previu Pro feature comparison
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">What’s included</th>
+                  <th scope="col">Previu Free</th>
+                  <th scope="col">Previu + Pro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Shareable review links; no client signup</th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Pins, arrows, rectangles & freehand drawings
+                  </th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Desktop, tablet & mobile review views</th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Threaded replies & feedback statuses</th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Feedback panel inside Elementor</th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">WordPress dashboard & email notifications</th>
+                  <td>✓ Included</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">File attachments & browser voice notes</th>
+                  <td>—</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Screenshot capture tool</th>
+                  <td>—</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    Previu media browser & WordPress library import
+                  </th>
+                  <td>—</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Agency branding & logo controls</th>
+                  <td>—</td>
+                  <td>✓ Included</td>
+                </tr>
+                <tr>
+                  <th scope="row">Slack notifications via webhook</th>
+                  <td>—</td>
+                  <td>✓ Included</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">
+            Pro is an add-on: keep Previu Free installed and active. Elementor
+            is required for the editor integration.
+          </p>
+        </div>
+      </section>
+      <section class="section pricing" id="pricing">
+        <div class="container">
+          <div class="pricing-heading">
+            <div>
+              <p class="eyebrow">CHOOSE YOUR SETUP</p>
+              <h2>Your workflow. Your site count.</h2>
+              <p>All paid tiers include the same Pro features.</p>
+            </div>
+            <div
+              class="billing-toggle"
+              role="group"
+              aria-label="Pricing billing period"
+            >
+              <button type="button" data-billing="annual" aria-pressed="true">
+                Annual</button
+              ><button
+                type="button"
+                data-billing="lifetime"
+                aria-pressed="false"
+              >
+                Lifetime
+              </button>
+            </div>
+          </div>
+          <div class="pricing-grid">
+            <article class="price-card free-card">
+              <span class="plan-label">THE CORE WORKFLOW</span>
+              <h3>Previu Free</h3>
+              <p class="plan-for">Start collecting clearer feedback.</p>
+              <div class="price">$0<span> / free</span></div>
+              <p class="billing-description">No paid license needed.</p>
+              <a
+                class="button secondary"
+                href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/"
+                >Download Free ↗</a
+              >
+              <ul>
+                <li>Visual pins & drawing tools</li>
+                <li>Responsive review views</li>
+                <li>Threaded feedback replies</li>
+                <li>Resolve inside Elementor</li>
+                <li>WordPress dashboard & email</li>
+              </ul>
+            </article>
             <article class="price-card" data-tier="single">
-              <div class="tier-top">
-                <h3>Single Site</h3>
-                <span>1 active site license</span>
+              <span class="plan-label">ALL PRO FEATURES</span>
+              <h3>Single Site</h3>
+              <p class="plan-for">For one active website.</p>
+              <div class="price">
+                <span data-price>$79</span><span data-period> / year</span>
               </div>
-              <div class="price"><span data-price>$79</span><small data-period>/year</small></div>
-              <p class="tier-note">Best for freelancers managing one main client site.</p>
-              <ul class="card-features">
-                <li><strong>Everything in Free</strong></li>
-                <li>White-label client reviews</li>
-                <li>Files & voice notes uploads</li>
-                <li>Instant Slack notifications</li>
-                <li>Elementor Media Tab integration</li>
+              <p class="billing-description" data-billing-description>
+                Billed annually.
+              </p>
+              <a
+                class="button secondary checkout-link"
+                href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/1/?billing_cycle=annual"
+                >Get Single Site Pro ↗</a
+              >
+              <ul>
+                <li>Everything in Free, plus:</li>
+                <li>File uploads & voice notes</li>
+                <li>Screenshot capture</li>
+                <li>Agency branding controls</li>
+                <li>Slack feedback notifications</li>
+                <li>Media browser & library import</li>
               </ul>
-              <a class="button secondary checkout-link" target="_blank" rel="noopener" href="#" data-plan="single">Get started</a>
             </article>
-
-            <article class="price-card highlighted" data-tier="five">
-              <div class="popular">Most popular</div>
-              <div class="tier-top">
-                <h3>5 Sites</h3>
-                <span>5 active sites license</span>
+            <article class="price-card featured-plan" data-tier="five">
+              <span class="plan-label">FOR GROWING STUDIOS</span>
+              <h3>5 Sites</h3>
+              <p class="plan-for">For a growing client roster.</p>
+              <div class="price">
+                <span data-price>$129</span><span data-period> / year</span>
               </div>
-              <div class="price"><span data-price>$129</span><small data-period>/year</small></div>
-              <p class="tier-note">Best for boutique agencies running multiple client reviews.</p>
-              <ul class="card-features">
-                <li><strong>Everything in Free</strong></li>
-                <li>White-label client reviews</li>
-                <li>Files & voice notes uploads</li>
-                <li>Instant Slack notifications</li>
-                <li>Elementor Media Tab integration</li>
+              <p class="billing-description" data-billing-description>
+                Billed annually.
+              </p>
+              <a
+                class="button primary checkout-link"
+                href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/5/?billing_cycle=annual"
+                >Get 5 Sites Pro ↗</a
+              >
+              <ul>
+                <li>Everything in Free, plus:</li>
+                <li>File uploads & voice notes</li>
+                <li>Screenshot capture</li>
+                <li>Agency branding controls</li>
+                <li>Slack feedback notifications</li>
+                <li>Media browser & library import</li>
               </ul>
-              <a class="button primary checkout-link" target="_blank" rel="noopener" href="#" data-plan="five">Get started</a>
             </article>
-
             <article class="price-card" data-tier="unlimited">
-              <div class="tier-top">
-                <h3>Unlimited</h3>
-                <span>Unlimited sites license</span>
+              <span class="plan-label">ALL PRO FEATURES</span>
+              <h3>Unlimited</h3>
+              <p class="plan-for">For agencies managing many sites.</p>
+              <div class="price">
+                <span data-price>$199</span><span data-period> / year</span>
               </div>
-              <div class="price"><span data-price>$199</span><small data-period>/year</small></div>
-              <p class="tier-note">Best for busy teams standardizing every client handoff.</p>
-              <ul class="card-features">
-                <li><strong>Everything in Free</strong></li>
-                <li>White-label client reviews</li>
-                <li>Files & voice notes uploads</li>
-                <li>Instant Slack notifications</li>
-                <li>Elementor Media Tab integration</li>
+              <p class="billing-description" data-billing-description>
+                Billed annually.
+              </p>
+              <a
+                class="button secondary checkout-link"
+                href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/unlimited/?billing_cycle=annual"
+                >Get Unlimited Pro ↗</a
+              >
+              <ul>
+                <li>Everything in Free, plus:</li>
+                <li>File uploads & voice notes</li>
+                <li>Screenshot capture</li>
+                <li>Agency branding controls</li>
+                <li>Slack feedback notifications</li>
+                <li>Media browser & library import</li>
               </ul>
-              <a class="button secondary checkout-link" target="_blank" rel="noopener" href="#" data-plan="unlimited">Get started</a>
             </article>
           </div>
+          <p class="pricing-note">
+            Prices in USD. Taxes, billing terms, license scope, and final totals
+            are shown at Freemius checkout. Annual plans are billed yearly;
+            lifetime is a one-time purchase.
+          </p>
+          <details class="all-prices">
+            <summary>See all annual and lifetime prices</summary>
+            <div class="table-wrap">
+              <table>
+                <caption>
+                  All configured Previu Pro prices in USD
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">License</th>
+                    <th scope="col">Annual</th>
+                    <th scope="col">Lifetime</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Single Site</th>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/1/?billing_cycle=annual"
+                        >$79 / year ↗</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/1/?billing_cycle=lifetime"
+                        >$149 one-time ↗</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5 Sites</th>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/5/?billing_cycle=annual"
+                        >$129 / year ↗</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/5/?billing_cycle=lifetime"
+                        >$249 one-time ↗</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Unlimited</th>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/unlimited/?billing_cycle=annual"
+                        >$199 / year ↗</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        href="https://checkout.freemius.com/plugin/31874/plan/52318/licenses/unlimited/?billing_cycle=lifetime"
+                        >$399 one-time ↗</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
         </div>
       </section>
-
-      <!-- FREQUENTLY ASKED QUESTIONS -->
-      <section class="faq-section" id="faq">
-        <div class="section-inner faq-container">
-          <div class="faq-header-col">
-            <p class="section-eyebrow">FAQ</p>
-            <h2>Frequently Asked Questions</h2>
-            <p>Answers to common questions before onboarding Previu Pro.</p>
-            <a class="button primary" href="#pricing">Upgrade to Pro</a>
+      <section class="section facts" id="product-details">
+        <div class="container facts-layout">
+          <div>
+            <p class="eyebrow">THE PRACTICAL DETAILS</p>
+            <h2>Fits into your<br />WordPress setup.</h2>
+            <p>
+              Previu is a WordPress plugin for visual website feedback, built
+              around Elementor client reviews.
+            </p>
+            <a
+              class="text-link"
+              href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/"
+              >Explore the free plugin ↗</a
+            >
           </div>
-          <div class="faq-accordion-col">
-            <details open>
-              <summary>Do all tiers include the same Pro features?</summary>
-              <p>Yes. The plan only changes by the number of active sites: 1, 5, or unlimited.</p>
+          <dl>
+            <div>
+              <dt>Best for</dt>
+              <dd>
+                Freelancers, web designers, Elementor developers, and WordPress
+                agencies.
+              </dd>
+            </div>
+            <div>
+              <dt>Requirements</dt>
+              <dd>
+                WordPress 5.8+, PHP 7.4+, and Elementor for the editor
+                integration. Pro requires Previu Free and an active Pro license.
+              </dd>
+            </div>
+            <div>
+              <dt>Client access</dt>
+              <dd>
+                Shareable review links. Clients enter their name; a WordPress
+                account is not required.
+              </dd>
+            </div>
+            <div>
+              <dt>Data & files</dt>
+              <dd>
+                Review sessions and annotations live in your WordPress database.
+                Pro uploads are stored on your WordPress host in Previu’s media
+                folder.
+              </dd>
+            </div>
+            <div>
+              <dt>Connections</dt>
+              <dd>
+                Elementor editor integration, WordPress email delivery, and
+                Slack incoming webhooks with Pro.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <section class="section faq" id="faq">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow">GOOD QUESTIONS. CLEAR ANSWERS.</p>
+            <h2>Before you<br />send that link.</h2>
+            <p>Have another question?</p>
+            <a
+              class="text-link"
+              href="https://wordpress.org/support/plugin/previu-visual-client-feedback-for-elementor/"
+              >Visit the WordPress support forum ↗</a
+            >
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Do clients need an account or another app?</summary>
+              <p>
+                No. Send a review link and your client can open it in their
+                browser, enter their name, and leave feedback. They do not need
+                a WordPress account or browser extension.
+              </p>
             </details>
             <details>
-              <summary>Do clients need a WordPress account?</summary>
-              <p>No. Clients use the same shareable review link experience from the free plugin.</p>
+              <summary>What does the free version include?</summary>
+              <p>
+                Previu Free includes review sessions, visual pins and drawing
+                tools, responsive review views, threaded replies, feedback
+                statuses, the Elementor feedback panel, and the WordPress
+                dashboard. Pro adds media, branding, and Slack features.
+              </p>
+            </details>
+            <details>
+              <summary>Do I need Elementor Pro?</summary>
+              <p>
+                The integration uses Elementor’s editor; Elementor Pro is not
+                listed as a requirement. You need WordPress 5.8 or later and PHP
+                7.4 or later. Try Previu Free with your theme and plugins before
+                rolling it out to client sites.
+              </p>
             </details>
             <details>
               <summary>Does Pro replace the free plugin?</summary>
-              <p>No. Pro is an add-on. Install and activate the free Previu plugin first, then activate Pro.</p>
+              <p>
+                No. Previu Pro is a separate add-on. Install and activate Previu
+                Free first, then install Pro and activate its license.
+              </p>
             </details>
             <details>
-              <summary>Can I buy lifetime access?</summary>
-              <p>Yes. Use the pricing toggle above to switch from annual to lifetime pricing.</p>
+              <summary>Where do uploaded files go?</summary>
+              <p>
+                Pro uploads are stored in Previu’s media folder on your
+                WordPress host. Browse them in Previu and separately import
+                selected files into the WordPress Media Library. Upload types
+                and sizes depend on plugin settings and hosting limits.
+              </p>
+            </details>
+            <details>
+              <summary>Can clients review different screen sizes?</summary>
+              <p>
+                Yes. The review interface includes desktop, tablet, and mobile
+                viewport modes. Feedback records its device context, and the
+                Elementor panel lets you filter feedback by device.
+              </p>
+            </details>
+            <details>
+              <summary>What do voice notes and Slack need?</summary>
+              <p>
+                Voice notes need microphone permission, HTTPS (or localhost),
+                and a browser that supports the recording format. Slack
+                notifications need a configured incoming webhook. Both require
+                Pro; email delivery depends on your WordPress mail setup.
+              </p>
+            </details>
+            <details>
+              <summary>Can I use my agency’s branding?</summary>
+              <p>
+                With Pro, set an agency name and portal logo and use the
+                branding controls to remove Previu branding from the client
+                review experience.
+              </p>
+            </details>
+            <details>
+              <summary>How do annual and lifetime plans differ?</summary>
+              <p>
+                Annual plans are billed yearly. The lifetime option is a
+                one-time purchase. Every paid tier includes the same Pro
+                features, with a choice of 1, 5, or unlimited sites. Check final
+                license, updates, support, and purchase terms at checkout.
+              </p>
             </details>
           </div>
         </div>
       </section>
-
-      <!-- BOTTOM CTA BANNER (ElementsKit-style) -->
-      <section class="bottom-cta-banner">
-        <div class="section-inner">
-          <h2>Elevate your client reviews today.</h2>
-          <p>Get Previu Pro to bring white-label portals, client file uploads, browser voice notes, and Slack alerts to your Elementor workflow.</p>
-          <a class="button primary" href="#pricing">Buy Previu Pro</a>
+      <section class="final-cta">
+        <div class="container">
+          <span class="cta-spark" aria-hidden="true">✳</span>
+          <p class="eyebrow">YOUR NEXT REVIEW CAN FEEL DIFFERENT.</p>
+          <h2>Turn “can you change this?”<br />into “consider it done.”</h2>
+          <p>Bring client feedback into the place you already build.</p>
+          <a
+            class="button primary"
+            href="https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/"
+            >Get started with Previu Free ↗</a
+          ><a class="cta-secondary" href="#pricing">Explore Pro plans →</a>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <span>&copy; 2026 Previu. All rights reserved.</span>
-        <div class="footer-links">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-        </div>
+    <footer>
+      <div class="container footer-top">
+        <a class="brand" href="#top" aria-label="Previu home"
+          ><img
+            src="assets/Previu-icon.png"
+            width="34"
+            height="34"
+            alt=""
+          />previu<span>.</span></a
+        >
+        <p>Clear feedback. Better websites.</p>
+        <nav aria-label="Footer navigation">
+          <a href="#product-details">Product details</a><a href="#faq">FAQ</a
+          ><a
+            href="https://wordpress.org/support/plugin/previu-visual-client-feedback-for-elementor/"
+            >Support ↗</a
+          >
+        </nav>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Previu.</span
+        ><span
+          >WordPress and Elementor are trademarks of their respective owners.
+          Previu is an independent product.</span
+        >
       </div>
     </footer>
-
-    <script src="script.js"></script>
+    <dialog
+      class="demo-lightbox"
+      id="demo-lightbox"
+      aria-labelledby="demo-lightbox-title"
+    >
+      <div class="demo-lightbox-header">
+        <h2 id="demo-lightbox-title">Previu product demo</h2>
+        <button type="button" data-demo-close aria-label="Close demo">
+          Close <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="demo-lightbox-content">
+        <img id="demo-modal-image" alt="" hidden /><video
+          id="demo-modal-video"
+          hidden
+          controls
+          playsinline
+          preload="metadata"
+          poster="assets/demo/client-review.webp"
+          aria-label="Guided walkthrough of real Previu product screenshots"
+        >
+          <source src="assets/demo/previu-walkthrough.mp4" type="video/mp4" />
+          <track
+            src="assets/demo/walkthrough.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+            default
+          />
+          Your browser cannot play this video.
+          <a href="assets/demo/previu-walkthrough.mp4"
+            >Download the walkthrough.</a
+          >
+        </video>
+      </div>
+    </dialog>
   </body>
 </html>

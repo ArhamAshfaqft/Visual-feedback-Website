@@ -1,0 +1,33 @@
+# Previu
+> A WordPress plugin for visual website feedback and client reviews, with a feedback panel inside Elementor.
+
+## Product
+- Audience: WordPress freelancers, web designers, Elementor developers, and agencies.
+- Workflow: Create a review session, share its link, collect visual feedback, then reply and resolve inside Elementor or manage feedback in WordPress.
+- Clients open a review link in their browser and enter their name; no WordPress account or extension is required.
+- Requirements: WordPress 5.8+, PHP 7.4+, Elementor for the editor integration.
+- Previu Free: review links, pins, arrows, rectangles, freehand annotations, desktop/tablet/mobile views, threaded replies, statuses, WordPress dashboard, email notifications.
+- Previu Pro: an add-on requiring the free plugin and an active Pro license. Adds uploads, voice notes, screenshot capture, branding controls, Slack webhook notifications, and media browsing/import.
+- Feedback records are stored in the WordPress database.
+- Pro uploads first go into Previu's media folder on the WordPress host. WordPress Media Library import is a separate action.
+- Voice recording depends on browser support, microphone permission and HTTPS or localhost.
+- Email depends on WordPress mail delivery. Slack requires an incoming webhook.
+
+## Pricing
+Prices below reflect the landing page configuration; Freemius checkout provides final terms and totals.
+- Free: USD 0.
+- Single Site Pro: USD 79/year or USD 149 one-time lifetime.
+- 5 Sites Pro: USD 129/year or USD 249 one-time lifetime.
+- Unlimited Sites Pro: USD 199/year or USD 399 one-time lifetime.
+- All paid tiers include the same Pro features; site allowance differs.
+- Taxes, update/support entitlements and full license terms: consult checkout.
+- No AppSumo partnership or deal terms are claimed on this page.
+
+## Links
+- [Free plugin](https://wordpress.org/plugins/previu-visual-client-feedback-for-elementor/)
+- [Support](https://wordpress.org/support/plugin/previu-visual-client-feedback-for-elementor/)
+- [Features](./#features)
+- [Free versus Pro](./#compare)
+- [Pricing](./#pricing)
+- [Product details](./#product-details)
+- [FAQ](./#faq)
